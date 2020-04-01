@@ -1,0 +1,70 @@
+.navbar{
+  color: #fff;
+  .warn {
+    font-size: 13px;
+    text-align: right;
+  }
+}
+.member-img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 376px;
+  margin: 40px auto;
+  position: relative;
+  .show {
+    position: absolute;
+    width: 100%;
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    text-align: center;
+    button {
+      margin-top: 40px;
+    }
+    &.in {
+      opacity: 0;
+      transition: opacity 1s;
+    }
+  }
+}
+.member-desc {
+  margin-top: 40px;
+  h2{
+    text-transform: capitalize;
+  }
+}
+.selected-member{
+  min-height: 400px;
+}
+.roll-member {
+  margin-top: 50px;
+  min-height: 250px;
+}
+.startroll-btn {
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  button {
+    max-width: 300px;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    margin-top: 20px;
+  }
+}
+.member-list {
+  max-width: 500px;
+  margin: 50px auto;
+  h5{
+    text-align: center;
+    letter-spacing: 2px;
+  }
+}
+
+.member-name {
+  text-align: center;
+  margin-top: 90px;
+  text-transform: capitalize;
+}
