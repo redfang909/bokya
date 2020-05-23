@@ -10,8 +10,10 @@ interface Props {
   details: Detail[],
   members: Member[],
   startPlay: boolean,
+  last: Member,
   onAddMember: (member: Member) => void,  
   onSelectDetail: (id: number) => void,
+  onRestartData: () => void,
 }
 
 const FormComponent = (props: Props) => {
@@ -21,6 +23,8 @@ const FormComponent = (props: Props) => {
     onSelectDetail,
     members,
     startPlay,
+    last,
+    onRestartData
   } = props
   const [name, setName] = useState('')
   const [gen, setGender] = useState(1)
@@ -40,6 +44,11 @@ const FormComponent = (props: Props) => {
     }) 
     const num: number = random(0, size(memberGenders) - 1)
     const detail: Detail = memberGenders[num] 
+
+    if(last){
+      onRestartData()     
+    }
+
     if (name) {
       const member = {
         id,

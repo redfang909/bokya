@@ -72,8 +72,7 @@ export default class Member {
         id: 9,
         gender: 2,
         description: `is a Filipino politician and legislator 
-        who is currently serving as a Senator of the Philippines. I don't know she is beautiful. 
-        Do you agree?`,
+        who is currently serving as a Senator of the Philippines.`,
         image: 'ou9xr4cll936a3f5c742306adfrexf92h.jpg',
         special: 0,
       },
