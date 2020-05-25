@@ -95,13 +95,16 @@ const HeaderComponent = (props: Props) => {
       const { id } = member          
       onRemoveMember(id)    
     }
-  }, [member, play])
+
+    if(last){ 
+      setMember(last);
+    }
+  }, [member, play, last])
 
   useEffect(() => {
-    let list: Member[] = []
     if (play) {          
       const setRollerInterval = setInterval(() => {
-        list = evaluateMembers(list)
+        evaluateMembers()
       }, 200)
       const setRollerTimeout = setTimeout(() => {     
         setPlay(false)
@@ -123,7 +126,7 @@ const HeaderComponent = (props: Props) => {
     return list[num]
   }
 
-  const evaluateMembers = (newMembers: Member[]) => {
+  const evaluateMembers = (newMembers: Member[] = []) => {
     const data: Member = getRandomValue(newMembers)
     if (!includes(newMembers, data.id)) {
       newMembers = [...newMembers, data.id] as Member[]
@@ -144,7 +147,7 @@ const HeaderComponent = (props: Props) => {
     }
   }
 
-  const selectedMember = last || member
+  const selected = last || member
   const startBtn = (size(members) === 1 && startPlay)
   return (
     <div className="container">
@@ -159,7 +162,7 @@ const HeaderComponent = (props: Props) => {
           { 
             (!play && member) && 
               <SelectedMember
-                member={selectedMember}
+                member={selected}
               />
           }
           {

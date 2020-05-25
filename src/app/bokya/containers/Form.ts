@@ -1,11 +1,10 @@
-import Member from 'src/app/class/Member'
 import { getMembers, getPlay, getLast } from './../selectors/member'
 import {connect} from 'react-redux'
-import { selectDetail, setDetails, setLast } from './../actions/action'
+import { selectDetail, setLast } from './../actions/action'
 import { addMember } from './../actions/action'
 import { getDetails } from '../selectors/member'
 import FormComponent from '../components/Form'
-import MemberM from 'src/app/models/member'
+import Member from 'src/app/models/member'
 
 const mapStateToProps = (state) => { 
   return {
@@ -18,15 +17,13 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAddMember: (member: MemberM) => {       
+    onAddMember: (member: Member) => {
       dispatch(addMember(member))
     },
     onSelectDetail: (id: number) => {       
       dispatch(selectDetail(id))
     },
     onRestartData: () => {
-      const { getDetails } = new Member()
-      dispatch(setDetails(getDetails()))
       dispatch(setLast(null))
     }
   }
