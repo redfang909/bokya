@@ -13,7 +13,7 @@
     "@hot-loader/react-dom": "^16.11.0",
     "connected-react-router": "^6.8.0",
     "history": "^4.10.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "react": "^16.12.0",
     "react-hot-loader": "^4.12.18",
     "react-redux": "^7.1.3",
