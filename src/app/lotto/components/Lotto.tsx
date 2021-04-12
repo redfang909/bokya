@@ -149,6 +149,7 @@ const LottoComponent = ({ getLottoOptions }: Props) => {
 					Reset Numbers
 				</Button>
 			</div>	
+			Date: 
 			<Result resultNumbers={lottoResult}/>		
     </div>
   )
