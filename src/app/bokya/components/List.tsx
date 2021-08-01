@@ -66,6 +66,8 @@ const ListComponent = (props: Props) => {
     onDeleteMember(id)
   }
  
+  console.log('were');
+  
   return (
     <div className="member-list">
       <h5>Add your 5 friends name here</h5>
@@ -81,8 +83,8 @@ const ListComponent = (props: Props) => {
             <FormContainer/>
           </li>
         }
-
         testing B ni hello
+        testing A log
       </ul>
       <br/>      
     </div>
