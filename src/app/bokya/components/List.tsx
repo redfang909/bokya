@@ -83,8 +83,6 @@ const ListComponent = (props: Props) => {
             <FormContainer/>
           </li>
         }
-        testing B ni hello
-        testing A log
       </ul>
       <br/>      
     </div>
