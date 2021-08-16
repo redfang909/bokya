@@ -15,5 +15,5 @@
 - npm run start
 ```
 
-You can play on this app and try link it to your browser.
+Try link this to your browser, and win lotto today.
 http://localhost:3000/lotto
