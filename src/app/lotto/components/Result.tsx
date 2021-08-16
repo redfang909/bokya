@@ -13,8 +13,7 @@ interface Props {
 }
 
 const ResultComponent = ({resultNumbers}: Props) => {
-	console.log(resultNumbers);
-	
+
   return (
     <Grid container spacing={3}>
 			{

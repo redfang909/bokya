@@ -78,8 +78,7 @@ const LottoComponent = ({ getLottoOptions }: Props) => {
 			const selectedLottoSchedule = find(getTodaySchedule, (data: Lotto) => {
 				return data.lottoNumber === lottoSelect
 			})
-			console.log(selectedLottoSchedule)
-			
+
 			const scheduleData = [...newLottoScheduleData, {
 				lottoData: selectedLottoSchedule,
 				jackPotNumber: newJackpotNumber

@@ -65,8 +65,6 @@ const ListComponent = (props: Props) => {
     setLastMember(member)
     onDeleteMember(id)
   }
- 
-  console.log('were');
   
   return (
     <div className="member-list">
