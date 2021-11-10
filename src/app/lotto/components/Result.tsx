@@ -18,7 +18,7 @@ const ResultComponent = ({resultNumbers}: Props) => {
     <Grid container spacing={3}>
 			{
 				map(resultNumbers, ({lottoData, jackPotNumber}: LottoNumbers) => (
-					<Grid item xs key={lottoData.id}>					
+					<Grid item sm key={lottoData.id}>					
 						<div className="result">
 							<h1>{lottoData.name}</h1>
 							{join(jackPotNumber, ' - ')}
